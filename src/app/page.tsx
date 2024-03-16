@@ -1,113 +1,237 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <section className="py-20 dark:bg-gray-800 dark:text-gray-100">
+      <div className="container px-4 mx-auto">
+        <div className="max-w-4xl mx-auto mb-16">
+          <div
+            className=" mb-8 font-bold tracking-wider uppercase dark:text-violet-400">Would
+            you be interested?
+          </div>
+          <h2 className="text-4xl font-bold lg:text-5xl">New Football Score
+            Simulator</h2>
+          <div className="my-8">
+            <p className="my-4">Hello guys, I am planning to work on a much more
+              improved version
+              of Football Score Simulator. Its <a
+                className="text-violet-400"
+                href="http://scoresim.ilya.online" target={"_blank"}>current version</a> is now too old
+              (2017) and can do so little.
+            </p>
+            <p className="my-4">That project was
+              written when I was beginner developer. Now that I know so much
+              more I would like to make something completely on a different
+              level.</p>
+            <p className="my-4">Below you will find the features I could implement, but I need to
+              know how much you are interested in them. This also should have a
+              somewhat paid tier to support my work.</p>
+            <p className="my-4">The clubs and players will initially be unlicensed for legal reasons, but the community will have an ability to create patches like for Football Manager.</p>
+
+            <p className="my-4">Please pick only one pricing level you would be interested in.</p>
+          </div>
+
+        </div>
+        <div className="flex flex-wrap items-stretch -mx-4">
+          <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
+            <div
+              className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900">
+              <div className="space-y-2">
+                <span className="text-6xl font-bold">Free</span>
+              </div>
+              <p className="mt-3 leading-relaxed dark:text-gray-400">Basic
+                Football Score Simulator</p>
+              <ul className="flex-1 mb-6 dark:text-gray-400">
+                <li className="flex mb-2 space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor"
+                       className="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Match score simulation, without commentary</span>
+                </li>
+                <li className="flex mb-2 space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor"
+                       className="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Friendlies and standalone games</span>
+                </li>
+                <li className="flex mb-2 space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor"
+                       className="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Clubs from five leagues</span>
+                </li>
+                <li className="flex mb-2 space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor"
+                       className="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>The most popular national teams</span>
+                </li>
+                <li className="flex mb-2 space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor"
+                       className="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Basic odds and leaderboards</span>
+                </li>
+              </ul>
+              {/*<button type="button"*/}
+              {/*        className="inline-block px-5 py-3 font-semibold tracking-wider text-center rounded dark:bg-violet-400 dark:text-gray-900">Interested*/}
+              {/*</button>*/}
+            </div>
+          </div>
+          <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
+            <div
+              className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-violet-400 dark:text-gray-900">
+              <div className="space-y-2">
+                <span className="text-6xl font-bold">$4
+							<span className="text-sm tracking-wide">/month</span>
+						</span>
+              </div>
+              <p className="leading-relaxed">The Football Score Sim you wanted</p>
+              <ul className="flex-1 space-y-2">
+                <li className="flex items-center space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor" className="flex-shrink-0 w-6 h-6">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Everything in Free</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor" className="flex-shrink-0 w-6 h-6">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>AI-driven match commentary</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor" className="flex-shrink-0 w-6 h-6">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Clubs from the world's top leagues</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor" className="flex-shrink-0 w-6 h-6">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Tournaments, cups and seasons</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor" className="flex-shrink-0 w-6 h-6">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Fantasy tournaments to follow and bet virtual currency on</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor" className="flex-shrink-0 w-6 h-6">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Realistic extra match events (VAR, injuries)</span>
+                </li>
+              </ul>
+              <a rel="noopener noreferrer" href="#"
+                 className="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded dark:bg-gray-800 dark:text-violet-400">I will subscribe</a>
+            </div>
+          </div>
+          <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
+            <div
+              className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900">
+              <div className="space-y-2">
+                <span className="text-6xl font-bold">$8
+							<span className="text-sm tracking-wide">/month</span>
+						</span>
+              </div>
+              <p className="leading-relaxed dark:text-gray-400">Advanced Football Score Sim experience.</p>
+              <ul className="space-y-2 dark:text-gray-400">
+                <li className="flex items-start space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor"
+                       className="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Everything in previous pricing levels</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor"
+                       className="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Clubs from minor leagues</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor"
+                       className="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Most of the world's national teams</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor"
+                       className="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Score predictor for upcoming in-game and real matches</span>
+                </li>
+                <li className="flex items-start space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                       fill="currentColor"
+                       className="flex-shrink-0 w-6 h-6 dark:text-violet-400">
+                    <path fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"></path>
+                  </svg>
+                  <span>Realistic squad updates</span>
+                </li>
+              </ul>
+              <a rel="noopener noreferrer" href="#"
+                 className="inline-block w-full px-5 py-3 font-semibold tracking-wider text-center rounded dark:bg-violet-400 dark:text-gray-900">I will subscribe</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </section>
   );
 }
