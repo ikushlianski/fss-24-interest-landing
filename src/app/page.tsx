@@ -259,7 +259,7 @@ export default function Home() {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Clubs from the world's top leagues</span>
+                  <span>Clubs from the world&apos;s top leagues</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <svg
@@ -374,7 +374,7 @@ export default function Home() {
                       clipRule="evenodd"
                     ></path>
                   </svg>
-                  <span>Most of the world's national teams</span>
+                  <span>Most of the world&apos;s national teams</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <svg
