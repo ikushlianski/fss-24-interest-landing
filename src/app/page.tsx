@@ -7,22 +7,61 @@ export default function Home() {
 
   const handleLevelSelected = (level: number) => {
     setLevelSelected(level);
+
+    fetch("/api/interested", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ level }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error("Network response was not ok.");
+      })
+      .then((data) => {
+        if (window && window.localStorage)
+          window.localStorage.setItem("levelSelected", level.toString());
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
+
+  const levelSelectedFromStorage = localStorage.getItem("levelSelected");
+  const shouldShowThankYou = levelSelectedFromStorage || levelSelected;
 
   return (
     <section className="py-20 dark:bg-gray-800 dark:text-gray-100">
       <div className="container px-4 mx-auto">
         <div className="max-w-4xl mx-auto mb-16">
           <div className=" mb-8 font-bold tracking-wider uppercase dark:text-violet-400">
-            Would you be interested?
+            {shouldShowThankYou
+              ? "Thank you for your interest!"
+              : "Would you be interested?"}
           </div>
           <h2 className="text-4xl font-bold lg:text-5xl">
             New Football Score Simulator
           </h2>
-          <div className="my-8">
-            <p className="my-4">
-              Hello guys, I am planning to work on a much more improved version
-              of Football Score Simulator. Its{" "}
+          <div className="flex items-center">
+            <div className={"my-4"}>
+              <img
+                className="w-16 h-16 rounded-full"
+                src="/ilya.jpg"
+                alt="Ilya"
+              />
+            </div>
+            <div className={"m-4 text-xs"}>
+              Ilya Kushlianski, software engineer
+            </div>
+          </div>
+
+          <div className="">
+            <p className="mb-4">
+              Hello guys, I am thinking whether it makes sense to work on a much
+              more improved version of Football Score Simulator. Its{" "}
               <a
                 className="text-violet-400"
                 href="http://scoresim.ilya.online"
@@ -139,13 +178,15 @@ export default function Home() {
                   <span>Basic odds and leaderboards</span>
                 </li>
               </ul>
-              <button
-                onClick={() => handleLevelSelected(1)}
-                type="button"
-                className="inline-block px-5 py-3 font-semibold tracking-wider text-center rounded dark:bg-violet-400 dark:text-gray-900"
-              >
-                I will play for free
-              </button>
+              {!shouldShowThankYou && (
+                <button
+                  onClick={() => handleLevelSelected(1)}
+                  type="button"
+                  className="inline-block px-5 py-3 font-semibold tracking-wider text-center rounded dark:bg-violet-400 dark:text-gray-900"
+                >
+                  I will play for free
+                </button>
+              )}
             </div>
           </div>
           <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
@@ -253,14 +294,14 @@ export default function Home() {
                   <span>Realistic extra match events (VAR, injuries)</span>
                 </li>
               </ul>
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded dark:bg-gray-800 dark:text-violet-400"
-                onClick={() => handleLevelSelected(2)}
-              >
-                I want this
-              </a>
+              {!shouldShowThankYou && (
+                <button
+                  className="inline-block w-full px-5 py-3 font-bold tracking-wider text-center rounded dark:bg-gray-800 dark:text-violet-400"
+                  onClick={() => handleLevelSelected(2)}
+                >
+                  I want this
+                </button>
+              )}
             </div>
           </div>
           <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
@@ -388,14 +429,14 @@ export default function Home() {
                   <span>Squad updates each transfer window</span>
                 </li>
               </ul>
-              <a
-                rel="noopener noreferrer"
-                href="#"
-                className="inline-block w-full px-5 py-3 font-semibold tracking-wider text-center rounded dark:bg-violet-400 dark:text-gray-900"
-                onClick={() => handleLevelSelected(3)}
-              >
-                I want this
-              </a>
+              {!shouldShowThankYou && (
+                <button
+                  className="inline-block w-full px-5 py-3 font-semibold tracking-wider text-center rounded dark:bg-violet-400 dark:text-gray-900"
+                  onClick={() => handleLevelSelected(3)}
+                >
+                  I want this
+                </button>
+              )}
             </div>
           </div>
         </div>
