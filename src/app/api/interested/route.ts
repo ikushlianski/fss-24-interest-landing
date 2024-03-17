@@ -3,8 +3,6 @@ import { MongoClient, ServerApiVersion } from "mongodb";
 export async function POST(request: Request) {
   const { level } = await request.json();
 
-  console.log("Level selected is", level);
-
   await recordDesiredLevel(level);
 
   return Response.json({ message: "Level recorded" });
@@ -24,10 +22,8 @@ const client = new MongoClient(uri, {
 
 async function recordDesiredLevel(level: string) {
   try {
-    // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
 
-    // Increment the level count
     const database = client.db("fms-interested");
     const collection = database.collection("interested");
     const query = { level };

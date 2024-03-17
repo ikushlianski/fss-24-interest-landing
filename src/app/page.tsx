@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [levelSelected, setLevelSelected] = useState(0);
+  const [shouldShowThankYou, setShouldShowThankYou] = useState(false);
 
   const handleLevelSelected = (level: number) => {
     setLevelSelected(level);
@@ -21,8 +22,8 @@ export default function Home() {
         }
         throw new Error("Network response was not ok.");
       })
-      .then((data) => {
-        if (window && window.localStorage)
+      .then(() => {
+        if (typeof window !== "undefined" && window.localStorage)
           window.localStorage.setItem("levelSelected", level.toString());
       })
       .catch((error) => {
@@ -30,8 +31,22 @@ export default function Home() {
       });
   };
 
-  const levelSelectedFromStorage = localStorage.getItem("levelSelected");
-  const shouldShowThankYou = levelSelectedFromStorage || levelSelected;
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.localStorage) {
+      const levelInStorage = localStorage.getItem("levelSelected");
+      let levelSelectedFromStorage;
+
+      if (levelInStorage) {
+        levelSelectedFromStorage = JSON.parse(levelInStorage);
+      }
+
+      console.log("levelSelectedFromStorage", levelSelectedFromStorage);
+
+      setShouldShowThankYou(
+        Boolean(levelSelectedFromStorage) || Boolean(levelSelected),
+      );
+    }
+  }, [levelSelected]);
 
   return (
     <section className="py-20 dark:bg-gray-800 dark:text-gray-100">
